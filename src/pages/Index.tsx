@@ -13,12 +13,12 @@ const Index = () => {
       image: 'https://images.unsplash.com/photo-1494790108755-2616c0763a57?w=400&h=300&fit=crop&crop=face',
       rating: 4.9,
       reviewCount: 127,
-      location: 'Downtown',
+      location: 'Centro',
       hourlyRate: 35,
-      specialties: ['Deep Cleaning', 'Eco-Friendly', 'Pet-Friendly'],
+      specialties: ['Limpeza Pesada', 'Eco-Friendly', 'Pet-Friendly'],
       isVerified: true,
-      availability: 'Available today',
-      experience: '5+ years'
+      availability: 'Disponível hoje',
+      experience: '5+ anos'
     },
     {
       id: '2',
@@ -26,12 +26,12 @@ const Index = () => {
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=300&fit=crop&crop=face',
       rating: 4.8,
       reviewCount: 89,
-      location: 'Midtown',
+      location: 'Zona Sul',
       hourlyRate: 30,
-      specialties: ['Regular Cleaning', 'Move-in/Move-out', 'Organization'],
+      specialties: ['Limpeza Regular', 'Mudança', 'Organização'],
       isVerified: true,
-      availability: 'Available tomorrow',
-      experience: '3+ years'
+      availability: 'Disponível amanhã',
+      experience: '3+ anos'
     },
     {
       id: '3',
@@ -39,50 +39,50 @@ const Index = () => {
       image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop&crop=face',
       rating: 4.9,
       reviewCount: 156,
-      location: 'Uptown',
+      location: 'Zona Norte',
       hourlyRate: 40,
-      specialties: ['Commercial Cleaning', 'Post-Construction', 'Deep Cleaning'],
+      specialties: ['Limpeza Comercial', 'Pós-Obra', 'Limpeza Pesada'],
       isVerified: true,
-      availability: 'Available this week',
-      experience: '7+ years'
+      availability: 'Disponível esta semana',
+      experience: '7+ anos'
     }
   ];
 
   const features = [
     {
       icon: Shield,
-      title: 'Verified Cleaners',
-      description: 'All cleaners undergo background checks and verification process'
+      title: 'Faxineiras Verificadas',
+      description: 'Todas as faxineiras passam por verificação de antecedentes e processo de validação'
     },
     {
       icon: Star,
-      title: 'Highly Rated',
-      description: 'Choose from top-rated cleaners with excellent reviews'
+      title: 'Altamente Avaliadas',
+      description: 'Escolha entre faxineiras com as melhores avaliações e excelentes comentários'
     },
     {
       icon: Calendar,
-      title: 'Flexible Scheduling',
-      description: 'Book instantly or schedule for later with easy rescheduling'
+      title: 'Agendamento Flexível',
+      description: 'Reserve instantaneamente ou agende para depois com facilidade de reagendamento'
     },
     {
       icon: MessageCircle,
-      title: 'Direct Communication',
-      description: 'Chat directly with cleaners before and during service'
+      title: 'Comunicação Direta',
+      description: 'Converse diretamente com as faxineiras antes e durante o serviço'
     }
   ];
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+      <section className="bg-gradient-to-br from-green-50 to-green-100 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Find Trusted
-              <span className="text-blue-600 block">House Cleaners</span>
+              Encontre Faxineiras
+              <span className="text-[#243c28] block">Confiáveis</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Connect with verified, reliable house cleaners for residential and commercial cleaning services. Book instantly or schedule for later.
+              Conecte-se com faxineiras verificadas e confiáveis para serviços de limpeza residencial e comercial. Reserve instantaneamente ou agende para depois.
             </p>
             
             {/* Search Bar */}
@@ -92,15 +92,15 @@ const Index = () => {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
                     type="text"
-                    placeholder="Enter your zip code or city"
+                    placeholder="Digite seu CEP ou cidade"
                     className="w-full pl-10 pr-4 py-3 border-0 focus:ring-0 text-gray-900 placeholder-gray-500"
                   />
                 </div>
                 <Link
                   to="/cleaners"
-                  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                  className="bg-[#243c28] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#1a2a1c] transition-colors"
                 >
-                  Find Cleaners
+                  Encontrar Faxineiras
                 </Link>
               </div>
             </div>
@@ -109,15 +109,15 @@ const Index = () => {
             <div className="flex justify-center space-x-8 text-sm text-gray-600">
               <div className="flex items-center space-x-1">
                 <CheckCircle className="w-4 h-4 text-green-500" />
-                <span>500+ Verified Cleaners</span>
+                <span>500+ Faxineiras Verificadas</span>
               </div>
               <div className="flex items-center space-x-1">
                 <CheckCircle className="w-4 h-4 text-green-500" />
-                <span>50,000+ Happy Customers</span>
+                <span>50.000+ Clientes Satisfeitos</span>
               </div>
               <div className="flex items-center space-x-1">
                 <CheckCircle className="w-4 h-4 text-green-500" />
-                <span>4.8★ Average Rating</span>
+                <span>4.8★ Avaliação Média</span>
               </div>
             </div>
           </div>
@@ -129,18 +129,18 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose CleanHire?
+              Por que Escolher a Limpify?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We make it easy to find reliable, professional house cleaners who meet your specific needs and standards.
+              Facilitamos encontrar faxineiras confiáveis e profissionais que atendem às suas necessidades e padrões específicos.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-[#243c28]" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {feature.title}
@@ -159,10 +159,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Featured Cleaners
+              Faxineiras em Destaque
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Meet some of our top-rated, verified house cleaners ready to help you.
+              Conheça algumas das nossas faxineiras mais bem avaliadas e verificadas, prontas para ajudá-lo.
             </p>
           </div>
 
@@ -175,9 +175,9 @@ const Index = () => {
           <div className="text-center">
             <Link
               to="/cleaners"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center space-x-2"
+              className="bg-[#243c28] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#1a2a1c] transition-colors inline-flex items-center space-x-2"
             >
-              <span>View All Cleaners</span>
+              <span>Ver Todas as Faxineiras</span>
               <Search className="w-4 h-4" />
             </Link>
           </div>
@@ -189,45 +189,45 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              How It Works
+              Como Funciona
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get your home cleaned in just a few simple steps.
+              Tenha sua casa limpa em apenas alguns passos simples.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+              <div className="w-16 h-16 bg-[#243c28] text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 1
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Search & Compare
+                Pesquise e Compare
               </h3>
               <p className="text-gray-600">
-                Browse verified cleaners in your area, compare rates, and read reviews from other customers.
+                Navegue pelas faxineiras verificadas da sua região, compare preços e leia avaliações de outros clientes.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+              <div className="w-16 h-16 bg-[#243c28] text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 2
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Chat & Book
+                Converse e Reserve
               </h3>
               <p className="text-gray-600">
-                Message cleaners directly to discuss your needs, then book instantly or schedule for later.
+                Converse com as faxineiras diretamente para discutir suas necessidades, depois reserve instantaneamente ou agende para depois.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+              <div className="w-16 h-16 bg-[#243c28] text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 3
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Relax & Enjoy
+                Relaxe e Aproveite
               </h3>
               <p className="text-gray-600">
-                Your cleaner arrives on time and gets to work. You can track progress and rate your experience.
+                Sua faxineira chega pontualmente e começa o trabalho. Você pode acompanhar o progresso e avaliar sua experiência.
               </p>
             </div>
           </div>
@@ -235,19 +235,19 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
+      <section className="py-20 bg-[#243c28]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Get Started?
+            Pronto para Começar?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Join thousands of satisfied customers who trust CleanHire for their cleaning needs.
+          <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+            Junte-se a milhares de clientes satisfeitos que confiam na Limpify para suas necessidades de limpeza.
           </p>
           <Link
             to="/cleaners"
-            className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center space-x-2 text-lg"
+            className="bg-white text-[#243c28] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center space-x-2 text-lg"
           >
-            <span>Find Your Cleaner Today</span>
+            <span>Encontre Sua Faxineira Hoje</span>
             <Search className="w-5 h-5" />
           </Link>
         </div>

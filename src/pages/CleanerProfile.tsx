@@ -32,40 +32,40 @@ const CleanerProfile = () => {
     image: 'https://images.unsplash.com/photo-1494790108755-2616c0763a57?w=400&h=400&fit=crop&crop=face',
     rating: 4.9,
     reviewCount: 127,
-    location: 'Downtown',
+    location: 'Centro',
     hourlyRate: 35,
-    specialties: ['Deep Cleaning', 'Eco-Friendly', 'Pet-Friendly', 'Move-in/Move-out', 'Window Cleaning'],
+    specialties: ['Limpeza Pesada', 'Eco-Friendly', 'Pet-Friendly', 'Mudança', 'Limpeza de Vidros'],
     isVerified: true,
-    availability: 'Available today',
-    experience: '5+ years',
-    description: "Hi! I'm Sarah, a professional house cleaner with over 5 years of experience. I take pride in providing thorough, reliable cleaning services that leave your home spotless. I'm fully insured, background-checked, and committed to using eco-friendly products whenever possible.",
+    availability: 'Disponível hoje',
+    experience: '5+ anos',
+    description: "Oi! Sou a Sarah, uma faxineira profissional com mais de 5 anos de experiência. Tenho orgulho de fornecer serviços de limpeza minuciosos e confiáveis que deixam sua casa impecável. Sou totalmente segurada, com antecedentes verificados e comprometida em usar produtos eco-friendly sempre que possível.",
     services: [
-      { name: 'Regular Cleaning', price: 35, duration: '2-3 hours' },
-      { name: 'Deep Cleaning', price: 45, duration: '4-5 hours' },
-      { name: 'Move-in/Move-out', price: 50, duration: '5-6 hours' },
-      { name: 'Post-Construction', price: 55, duration: '6-7 hours' }
+      { name: 'Limpeza Regular', price: 35, duration: '2-3 horas' },
+      { name: 'Limpeza Pesada', price: 45, duration: '4-5 horas' },
+      { name: 'Mudança', price: 50, duration: '5-6 horas' },
+      { name: 'Pós-Obra', price: 55, duration: '6-7 horas' }
     ],
     reviews: [
       {
         id: 1,
         author: 'Jennifer M.',
         rating: 5,
-        date: '2 days ago',
-        comment: 'Sarah did an amazing job! My house has never looked better. She was punctual, professional, and very thorough. Highly recommend!'
+        date: '2 dias atrás',
+        comment: 'Sarah fez um trabalho incrível! Minha casa nunca esteve tão limpa. Ela foi pontual, profissional e muito minuciosa. Recomendo muito!'
       },
       {
         id: 2,
         author: 'Mike R.',
         rating: 5,
-        date: '1 week ago',
-        comment: 'Excellent service! Sarah was very communicative and did exactly what we discussed. Will definitely book again.'
+        date: '1 semana atrás',
+        comment: 'Excelente serviço! Sarah foi muito comunicativa e fez exatamente o que discutimos. Definitivamente vou agendar novamente.'
       },
       {
         id: 3,
         author: 'Lisa K.',
         rating: 4,
-        date: '2 weeks ago',
-        comment: 'Great job overall. Very reliable and trustworthy. The house was spotless when I came home.'
+        date: '2 semanas atrás',
+        comment: 'Ótimo trabalho no geral. Muito confiável e de confiança. A casa estava impecável quando cheguei em casa.'
       }
     ],
     gallery: [
@@ -77,7 +77,7 @@ const CleanerProfile = () => {
   };
 
   const availableTimes = [
-    '9:00 AM', '10:00 AM', '11:00 AM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM'
+    '9:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00'
   ];
 
   return (
@@ -89,16 +89,16 @@ const CleanerProfile = () => {
             <div className="flex items-center justify-between">
               <Link 
                 to="/cleaners" 
-                className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors"
+                className="flex items-center space-x-2 text-gray-600 hover:text-[#243c28] transition-colors"
               >
                 <ArrowLeft className="w-4 h-4" />
-                <span>Back to cleaners</span>
+                <span>Voltar para faxineiras</span>
               </Link>
               <div className="flex items-center space-x-2">
                 <button className="p-2 text-gray-600 hover:text-red-500 transition-colors">
                   <Heart className="w-5 h-5" />
                 </button>
-                <button className="p-2 text-gray-600 hover:text-blue-600 transition-colors">
+                <button className="p-2 text-gray-600 hover:text-[#243c28] transition-colors">
                   <Share className="w-5 h-5" />
                 </button>
               </div>
@@ -137,14 +137,14 @@ const CleanerProfile = () => {
                             <div className="flex items-center space-x-1">
                               <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                               <span className="font-medium text-gray-900">{cleaner.rating}</span>
-                              <span className="text-gray-500">({cleaner.reviewCount} reviews)</span>
+                              <span className="text-gray-500">({cleaner.reviewCount} avaliações)</span>
                             </div>
                             <Badge variant="secondary" className="flex items-center space-x-1">
                               <MapPin className="w-3 h-3" />
                               <span>{cleaner.location}</span>
                             </Badge>
                           </div>
-                          <p className="text-gray-600 mb-4">{cleaner.experience} experience</p>
+                          <p className="text-gray-600 mb-4">{cleaner.experience} de experiência</p>
                           <div className="flex flex-wrap gap-2">
                             {cleaner.specialties.map((specialty, index) => (
                               <Badge key={index} variant="outline">
@@ -154,8 +154,8 @@ const CleanerProfile = () => {
                           </div>
                         </div>
                         <div className="text-right">
-                          <p className="text-3xl font-bold text-gray-900">${cleaner.hourlyRate}</p>
-                          <p className="text-sm text-gray-500">per hour</p>
+                          <p className="text-3xl font-bold text-gray-900">R$ {cleaner.hourlyRate}</p>
+                          <p className="text-sm text-gray-500">por hora</p>
                         </div>
                       </div>
                     </div>
@@ -166,37 +166,37 @@ const CleanerProfile = () => {
               {/* Tabs */}
               <Tabs defaultValue="about" className="bg-white rounded-xl shadow-sm border border-gray-200">
                 <TabsList className="grid w-full grid-cols-4">
-                  <TabsTrigger value="about">About</TabsTrigger>
-                  <TabsTrigger value="services">Services</TabsTrigger>
-                  <TabsTrigger value="reviews">Reviews</TabsTrigger>
-                  <TabsTrigger value="gallery">Gallery</TabsTrigger>
+                  <TabsTrigger value="about">Sobre</TabsTrigger>
+                  <TabsTrigger value="services">Serviços</TabsTrigger>
+                  <TabsTrigger value="reviews">Avaliações</TabsTrigger>
+                  <TabsTrigger value="gallery">Galeria</TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="about" className="p-6">
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3">About {cleaner.name}</h3>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3">Sobre {cleaner.name}</h3>
                       <p className="text-gray-600 leading-relaxed">{cleaner.description}</p>
                     </div>
                     
                     <div>
-                      <h4 className="font-medium text-gray-900 mb-3">Verified Information</h4>
+                      <h4 className="font-medium text-gray-900 mb-3">Informações Verificadas</h4>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="flex items-center space-x-2">
                           <CheckCircle className="w-5 h-5 text-green-500" />
-                          <span className="text-sm text-gray-700">Background Check</span>
+                          <span className="text-sm text-gray-700">Antecedentes Verificados</span>
                         </div>
                         <div className="flex items-center space-x-2">
                           <CheckCircle className="w-5 h-5 text-green-500" />
-                          <span className="text-sm text-gray-700">Identity Verified</span>
+                          <span className="text-sm text-gray-700">Identidade Verificada</span>
                         </div>
                         <div className="flex items-center space-x-2">
                           <CheckCircle className="w-5 h-5 text-green-500" />
-                          <span className="text-sm text-gray-700">Insured & Bonded</span>
+                          <span className="text-sm text-gray-700">Segurada e Garantida</span>
                         </div>
                         <div className="flex items-center space-x-2">
                           <CheckCircle className="w-5 h-5 text-green-500" />
-                          <span className="text-sm text-gray-700">References Checked</span>
+                          <span className="text-sm text-gray-700">Referências Verificadas</span>
                         </div>
                       </div>
                     </div>
@@ -205,7 +205,7 @@ const CleanerProfile = () => {
 
                 <TabsContent value="services" className="p-6">
                   <div className="space-y-4">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Services & Pricing</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Serviços e Preços</h3>
                     {cleaner.services.map((service, index) => (
                       <div key={index} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg">
                         <div>
@@ -213,7 +213,7 @@ const CleanerProfile = () => {
                           <p className="text-sm text-gray-600">{service.duration}</p>
                         </div>
                         <div className="text-right">
-                          <p className="text-lg font-semibold text-gray-900">${service.price}/hr</p>
+                          <p className="text-lg font-semibold text-gray-900">R$ {service.price}/h</p>
                         </div>
                       </div>
                     ))}
@@ -223,10 +223,10 @@ const CleanerProfile = () => {
                 <TabsContent value="reviews" className="p-6">
                   <div className="space-y-6">
                     <div className="flex items-center justify-between">
-                      <h3 className="text-lg font-semibold text-gray-900">Reviews ({cleaner.reviewCount})</h3>
+                      <h3 className="text-lg font-semibold text-gray-900">Avaliações ({cleaner.reviewCount})</h3>
                       <div className="flex items-center space-x-2">
                         <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                        <span className="font-medium text-gray-900">{cleaner.rating} average</span>
+                        <span className="font-medium text-gray-900">{cleaner.rating} média</span>
                       </div>
                     </div>
                     
@@ -253,13 +253,13 @@ const CleanerProfile = () => {
 
                 <TabsContent value="gallery" className="p-6">
                   <div className="space-y-4">
-                    <h3 className="text-lg font-semibold text-gray-900">Work Gallery</h3>
+                    <h3 className="text-lg font-semibold text-gray-900">Galeria de Trabalhos</h3>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                       {cleaner.gallery.map((image, index) => (
                         <img
                           key={index}
                           src={image}
-                          alt={`Work sample ${index + 1}`}
+                          alt={`Exemplo de trabalho ${index + 1}`}
                           className="w-full h-32 object-cover rounded-lg"
                         />
                       ))}
@@ -282,7 +282,7 @@ const CleanerProfile = () => {
                   <div className="space-y-3">
                     <Button className="w-full" size="lg">
                       <Calendar className="w-4 h-4 mr-2" />
-                      Book Now
+                      Agendar Agora
                     </Button>
                     
                     <div className="grid grid-cols-2 gap-2">
@@ -292,7 +292,7 @@ const CleanerProfile = () => {
                       </Button>
                       <Button variant="outline" size="sm">
                         <Video className="w-4 h-4 mr-1" />
-                        Video Call
+                        Vídeo
                       </Button>
                     </div>
                   </div>
@@ -300,25 +300,25 @@ const CleanerProfile = () => {
 
                 {/* Quick Booking */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                  <h3 className="font-semibold text-gray-900 mb-4">Quick Booking</h3>
+                  <h3 className="font-semibold text-gray-900 mb-4">Agendamento Rápido</h3>
                   
                   <div className="space-y-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Select Date
+                        Selecionar Data
                       </label>
                       <input
                         type="date"
                         value={selectedDate}
                         onChange={(e) => setSelectedDate(e.target.value)}
-                        className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#243c28] focus:border-transparent"
                         min={new Date().toISOString().split('T')[0]}
                       />
                     </div>
                     
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Select Time
+                        Selecionar Horário
                       </label>
                       <div className="grid grid-cols-2 gap-2">
                         {availableTimes.map((time) => (
@@ -327,7 +327,7 @@ const CleanerProfile = () => {
                             onClick={() => setSelectedTime(time)}
                             className={`p-2 text-sm rounded-lg border transition-colors ${
                               selectedTime === time
-                                ? 'bg-blue-50 border-blue-200 text-blue-700'
+                                ? 'bg-green-50 border-green-200 text-[#243c28]'
                                 : 'border-gray-200 hover:bg-gray-50'
                             }`}
                           >
@@ -341,19 +341,19 @@ const CleanerProfile = () => {
                       className="w-full" 
                       disabled={!selectedDate || !selectedTime}
                     >
-                      Book for {selectedTime} on {selectedDate}
+                      Agendar para {selectedTime} em {selectedDate}
                     </Button>
                   </div>
                 </div>
 
                 {/* Contact Info */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                  <h3 className="font-semibold text-gray-900 mb-4">Need Help?</h3>
+                  <h3 className="font-semibold text-gray-900 mb-4">Precisa de Ajuda?</h3>
                   <div className="space-y-3 text-sm text-gray-600">
-                    <p>Have questions about this cleaner or need assistance with booking?</p>
+                    <p>Tem dúvidas sobre esta faxineira ou precisa de ajuda com o agendamento?</p>
                     <Button variant="outline" size="sm" className="w-full">
                       <Phone className="w-4 h-4 mr-2" />
-                      Contact Support
+                      Contatar Suporte
                     </Button>
                   </div>
                 </div>
