@@ -1,12 +1,12 @@
-
 import React, { useState } from 'react';
-import { Send, Search, Phone, Video, MoreVertical } from 'lucide-react';
+import { Send, Search, Phone, Video, MoreVertical, ArrowLeft } from 'lucide-react';
 import Layout from '../components/Layout';
 import { Button } from '@/components/ui/button';
 
 const Messages = () => {
   const [selectedChat, setSelectedChat] = useState('1');
   const [messageText, setMessageText] = useState('');
+  const [showMobileChat, setShowMobileChat] = useState(false);
 
   const conversations = [
     {
@@ -121,11 +121,22 @@ const Messages = () => {
     }
   };
 
+  const handleChatSelect = (chatId: string) => {
+    setSelectedChat(chatId);
+    setShowMobileChat(true);
+  };
+
+  const handleBackToList = () => {
+    setShowMobileChat(false);
+  };
+
   return (
     <Layout hideFooter>
       <div className="h-screen bg-gray-50 flex">
-        {/* Conversations Sidebar */}
-        <div className="w-80 bg-white border-r border-gray-200 flex flex-col">
+        {/* Conversations Sidebar - Hidden on mobile when chat is open */}
+        <div className={`w-full md:w-80 bg-white border-r border-gray-200 flex flex-col ${
+          showMobileChat ? 'hidden md:flex' : 'flex'
+        }`}>
           {/* Header */}
           <div className="p-4 border-b border-gray-200">
             <h1 className="text-xl font-semibold text-gray-900 mb-3">Mensagens</h1>
@@ -144,7 +155,7 @@ const Messages = () => {
             {conversations.map((conversation) => (
               <div
                 key={conversation.id}
-                onClick={() => setSelectedChat(conversation.id)}
+                onClick={() => handleChatSelect(conversation.id)}
                 className={`p-4 border-b border-gray-100 cursor-pointer hover:bg-gray-50 transition-colors ${
                   selectedChat === conversation.id ? 'bg-green-50 border-green-200' : ''
                 }`}
@@ -186,14 +197,24 @@ const Messages = () => {
           </div>
         </div>
 
-        {/* Chat Area */}
-        <div className="flex-1 flex flex-col">
+        {/* Chat Area - Full width on mobile when open */}
+        <div className={`flex-1 flex flex-col ${
+          !showMobileChat ? 'hidden md:flex' : 'flex'
+        }`}>
           {selectedConversation ? (
             <>
               {/* Chat Header */}
               <div className="bg-white border-b border-gray-200 p-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
+                    {/* Back button for mobile */}
+                    <button
+                      onClick={handleBackToList}
+                      className="md:hidden p-1 text-gray-600 hover:text-[#243c28]"
+                    >
+                      <ArrowLeft className="w-5 h-5" />
+                    </button>
+                    
                     <div className="relative">
                       <img
                         src={selectedConversation.cleaner.image}
@@ -218,7 +239,7 @@ const Messages = () => {
                     <Button variant="outline" size="sm">
                       <Phone className="w-4 h-4" />
                     </Button>
-                    <Button variant="outline" size="sm">
+                    <Button variant="outline" size="sm" className="hidden sm:flex">
                       <Video className="w-4 h-4" />
                     </Button>
                     <Button variant="outline" size="sm">
@@ -236,7 +257,7 @@ const Messages = () => {
                     className={`flex ${message.sender === 'client' ? 'justify-end' : 'justify-start'}`}
                   >
                     <div
-                      className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
+                      className={`max-w-xs sm:max-w-sm lg:max-w-md px-4 py-2 rounded-lg ${
                         message.sender === 'client'
                           ? 'bg-[#243c28] text-white'
                           : 'bg-gray-200 text-gray-900'

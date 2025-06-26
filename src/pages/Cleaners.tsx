@@ -1,9 +1,9 @@
-
 import React, { useState } from 'react';
 import { Search, Filter, Grid, List } from 'lucide-react';
 import Layout from '../components/Layout';
 import CleanerCard from '../components/CleanerCard';
 import FilterSidebar from '../components/FilterSidebar';
+import MobileFilterDrawer from '../components/MobileFilterDrawer';
 
 const Cleaners = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -138,19 +138,26 @@ const Cleaners = () => {
                   />
                 </div>
                 
-                <div className="flex items-center space-x-2">
-                  <button
-                    onClick={() => setViewMode('grid')}
-                    className={`p-2 rounded-lg ${viewMode === 'grid' ? 'bg-green-100 text-[#243c28]' : 'text-gray-400 hover:text-gray-600'}`}
-                  >
-                    <Grid className="w-4 h-4" />
-                  </button>
-                  <button
-                    onClick={() => setViewMode('list')}
-                    className={`p-2 rounded-lg ${viewMode === 'list' ? 'bg-green-100 text-[#243c28]' : 'text-gray-400 hover:text-gray-600'}`}
-                  >
-                    <List className="w-4 h-4" />
-                  </button>
+                <div className="flex items-center justify-between sm:justify-start space-x-2">
+                  {/* Mobile Filter Button */}
+                  <div className="lg:hidden">
+                    <MobileFilterDrawer filters={filters} onFiltersChange={setFilters} />
+                  </div>
+                  
+                  <div className="flex items-center space-x-2">
+                    <button
+                      onClick={() => setViewMode('grid')}
+                      className={`p-2 rounded-lg ${viewMode === 'grid' ? 'bg-green-100 text-[#243c28]' : 'text-gray-400 hover:text-gray-600'}`}
+                    >
+                      <Grid className="w-4 h-4" />
+                    </button>
+                    <button
+                      onClick={() => setViewMode('list')}
+                      className={`p-2 rounded-lg ${viewMode === 'list' ? 'bg-green-100 text-[#243c28]' : 'text-gray-400 hover:text-gray-600'}`}
+                    >
+                      <List className="w-4 h-4" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -160,8 +167,8 @@ const Cleaners = () => {
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col lg:flex-row gap-8">
-            {/* Filters Sidebar */}
-            <div className="lg:w-80 flex-shrink-0">
+            {/* Desktop Filters Sidebar */}
+            <div className="hidden lg:block lg:w-80 flex-shrink-0">
               <FilterSidebar filters={filters} onFiltersChange={setFilters} />
             </div>
 
