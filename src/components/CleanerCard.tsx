@@ -32,7 +32,7 @@ const CleanerCard: React.FC<CleanerCardProps> = ({ cleaner }) => {
         {cleaner.isVerified && (
           <div className="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-medium flex items-center space-x-1">
             <Shield className="w-3 h-3" />
-            <span>Verified</span>
+            <span>Verificada</span>
           </div>
         )}
       </div>
@@ -50,15 +50,15 @@ const CleanerCard: React.FC<CleanerCardProps> = ({ cleaner }) => {
                 {cleaner.rating}
               </span>
               <span className="text-sm text-gray-500">
-                ({cleaner.reviewCount} reviews)
+                ({cleaner.reviewCount} avaliações)
               </span>
             </div>
           </div>
           <div className="text-right">
             <p className="text-2xl font-bold text-gray-900">
-              ${cleaner.hourlyRate}
+              R$ {cleaner.hourlyRate}
             </p>
-            <p className="text-sm text-gray-500">per hour</p>
+            <p className="text-sm text-gray-500">por hora</p>
           </div>
         </div>
 
@@ -76,14 +76,14 @@ const CleanerCard: React.FC<CleanerCardProps> = ({ cleaner }) => {
             {cleaner.specialties.slice(0, 3).map((specialty, index) => (
               <span
                 key={index}
-                className="px-2 py-1 bg-blue-50 text-blue-700 text-xs rounded-full font-medium"
+                className="px-2 py-1 bg-green-50 text-[#243c28] text-xs rounded-full font-medium"
               >
                 {specialty}
               </span>
             ))}
             {cleaner.specialties.length > 3 && (
               <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium">
-                +{cleaner.specialties.length - 3} more
+                +{cleaner.specialties.length - 3} mais
               </span>
             )}
           </div>
@@ -99,9 +99,9 @@ const CleanerCard: React.FC<CleanerCardProps> = ({ cleaner }) => {
         <div className="flex space-x-2">
           <Link
             to={`/cleaner/${cleaner.id}`}
-            className="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+            className="flex-1 bg-[#243c28] text-white text-center py-2 px-4 rounded-lg text-sm font-medium hover:bg-[#1a2a1c] transition-colors"
           >
-            View Profile
+            Ver Perfil
           </Link>
           <button className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
             <MessageCircle className="w-4 h-4 text-gray-600" />
