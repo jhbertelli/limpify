@@ -20,7 +20,7 @@ const Cleaners = () => {
     {
       id: '1',
       name: 'Sarah Johnson',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616c0763a57?w=400&h=300&fit=crop&crop=face',
+      image: 'https://images.pexels.com/photos/3768910/pexels-photo-3768910.jpeg?w=400&h=300',
       rating: 4.9,
       reviewCount: 127,
       location: 'Centro',
@@ -33,7 +33,7 @@ const Cleaners = () => {
     {
       id: '2',
       name: 'Maria Rodriguez',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=300&fit=crop&crop=face',
+      image: 'https://cdn.pixabay.com/photo/2019/04/02/18/16/cleaning-4098410_960_720.jpg',
       rating: 4.8,
       reviewCount: 89,
       location: 'Zona Sul',
@@ -46,7 +46,7 @@ const Cleaners = () => {
     {
       id: '3',
       name: 'Jennifer Chen',
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop&crop=face',
+      image: 'https://images.pexels.com/photos/5591967/pexels-photo-5591967.jpeg?w=400',
       rating: 4.9,
       reviewCount: 156,
       location: 'Zona Norte',
@@ -59,12 +59,12 @@ const Cleaners = () => {
     {
       id: '4',
       name: 'Amanda Williams',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&crop=face',
+      image: 'https://images.pexels.com/photos/4107105/pexels-photo-4107105.jpeg?w=400',
       rating: 4.7,
       reviewCount: 73,
       location: 'Zona Oeste',
       hourlyRate: 28,
-      specialties: ['Limpeza Regular', 'Limpeza de Vidros', 'Eco-Friendly'],
+      specialties: ['Limpeza Regular', 'Eco-Friendly', 'Limpeza de Vidros/Janelas'],
       isVerified: true,
       availability: 'Disponível hoje',
       experience: '2+ anos'
@@ -72,7 +72,7 @@ const Cleaners = () => {
     {
       id: '5',
       name: 'Lisa Thompson',
-      image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=300&fit=crop&crop=face',
+      image: 'https://images.pexels.com/photos/3871597/pexels-photo-3871597.jpeg?w=400',
       rating: 4.8,
       reviewCount: 104,
       location: 'Zona Leste',
@@ -84,8 +84,8 @@ const Cleaners = () => {
     },
     {
       id: '6',
-      name: 'Michael Davis',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=300&fit=crop&crop=face',
+      name: 'Michele Davis',
+      image: 'https://images.pexels.com/photos/5591651/pexels-photo-5591651.jpeg?w=400',
       rating: 4.9,
       reviewCount: 142,
       location: 'Centro',

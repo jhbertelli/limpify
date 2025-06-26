@@ -29,7 +29,7 @@ const CleanerProfile = () => {
   const cleaner = {
     id: '1',
     name: 'Sarah Johnson',
-    image: 'https://images.unsplash.com/photo-1494790108755-2616c0763a57?w=400&h=400&fit=crop&crop=face',
+    image: 'https://images.pexels.com/photos/3768910/pexels-photo-3768910.jpeg?w=400&h=300',
     rating: 4.9,
     reviewCount: 127,
     location: 'Centro',
@@ -69,10 +69,10 @@ const CleanerProfile = () => {
       }
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1558618666-c5ae059577b2?w=400&h=300&fit=crop',
+      'https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?w=400',
       'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop',
-      'https://images.unsplash.com/photo-1584622781564-1d987ba4c40c?w=400&h=300&fit=crop',
-      'https://images.unsplash.com/photo-1556912167-f556f1e27c0c?w=400&h=300&fit=crop'
+      'https://images.pexels.com/photos/2343465/pexels-photo-2343465.jpeg?w=400',
+      'https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?w=400'
     ]
   };
 
@@ -341,7 +341,7 @@ const CleanerProfile = () => {
                       className="w-full" 
                       disabled={!selectedDate || !selectedTime}
                     >
-                      Agendar para {selectedTime} em {selectedDate}
+                      Agendar {(selectedDate && selectedTime) && `para ${new Date(selectedDate).toLocaleDateString()} às ${selectedTime}`}
                     </Button>
                   </div>
                 </div>

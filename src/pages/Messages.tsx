@@ -13,7 +13,7 @@ const Messages = () => {
       id: '1',
       cleaner: {
         name: 'Sarah Johnson',
-        image: 'https://images.unsplash.com/photo-1494790108755-2616c0763a57?w=100&h=100&fit=crop&crop=face',
+        image: 'https://images.pexels.com/photos/3768910/pexels-photo-3768910.jpeg?w=400&h=300',
         isOnline: true
       },
       lastMessage: 'Estarei aí às 10h em ponto! Só para confirmar, você queria o serviço de limpeza pesada, certo?',
@@ -56,7 +56,7 @@ const Messages = () => {
       id: '2',
       cleaner: {
         name: 'Maria Rodriguez',
-        image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
+        image: 'https://cdn.pixabay.com/photo/2019/04/02/18/16/cleaning-4098410_960_720.jpg',
         isOnline: false
       },
       lastMessage: 'Muito obrigada! A casa ficou incrível. Definitivamente vou agendá-la novamente.',
@@ -81,7 +81,7 @@ const Messages = () => {
       id: '3',
       cleaner: {
         name: 'Jennifer Chen',
-        image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face',
+        image: 'https://images.pexels.com/photos/5591967/pexels-photo-5591967.jpeg?w=400',
         isOnline: true
       },
       lastMessage: 'Tenho uma vaga esta sexta às 14h se funcionar para você?',
@@ -122,7 +122,7 @@ const Messages = () => {
   };
 
   return (
-    <Layout>
+    <Layout hideFooter>
       <div className="h-screen bg-gray-50 flex">
         {/* Conversations Sidebar */}
         <div className="w-80 bg-white border-r border-gray-200 flex flex-col">

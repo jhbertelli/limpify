@@ -17,21 +17,21 @@ interface FilterSidebarProps {
 
 const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFiltersChange }) => {
   const serviceTypes = [
-    'Regular Cleaning',
-    'Deep Cleaning',
-    'Move-in/Move-out',
-    'Commercial Cleaning',
-    'Post-Construction',
-    'Window Cleaning',
-    'Carpet Cleaning',
-    'Organizing'
+    'Limpeza Regular',
+    'Limpeza Pesada',
+    'Limpeza Comercial',
+    'Mudança',
+    'Pós-Obra',
+    'Limpeza de Vidros/Janelas',
+    'Limpeza de Carpetes',
+    'Organização'
   ];
 
   const availabilityOptions = [
-    'Available Today',
-    'Available This Week',
-    'Weekends Only',
-    'Flexible Schedule'
+    'Disponível Hoje',
+    'Disponível Essa Semana',
+    'Apenas Finais de Semana',
+    'Horário Flexível'
   ];
 
   const updateFilters = (key: string, value: any) => {
@@ -43,12 +43,12 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFiltersChange 
 
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 space-y-6">
-      <h3 className="text-lg font-semibold text-gray-900">Filters</h3>
+      <h3 className="text-lg font-semibold text-gray-900">Filtros</h3>
 
       {/* Price Range */}
       <div>
         <label className="block text-sm font-medium text-gray-900 mb-3">
-          Price Range (per hour)
+          Intervalo de Preços (por hora)
         </label>
         <div className="space-y-3">
           <Slider
@@ -69,7 +69,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFiltersChange 
       {/* Rating */}
       <div>
         <label className="block text-sm font-medium text-gray-900 mb-3">
-          Minimum Rating
+          Avaliação Mínima
         </label>
         <div className="space-y-2">
           {[4.5, 4.0, 3.5, 3.0].map((rating) => (
@@ -84,7 +84,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFiltersChange 
               />
               <div className="flex items-center space-x-1">
                 <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                <span className="text-sm text-gray-700">{rating}+ stars</span>
+                <span className="text-sm text-gray-700">{rating}+ estrelas</span>
               </div>
             </label>
           ))}
@@ -94,7 +94,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFiltersChange 
       {/* Service Types */}
       <div>
         <label className="block text-sm font-medium text-gray-900 mb-3">
-          Service Types
+          Tipos de Serviço
         </label>
         <div className="space-y-2 max-h-48 overflow-y-auto">
           {serviceTypes.map((service) => (
@@ -117,13 +117,13 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFiltersChange 
       {/* Location */}
       <div>
         <label className="block text-sm font-medium text-gray-900 mb-3">
-          Location
+          Localização
         </label>
         <div className="relative">
           <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
           <input
             type="text"
-            placeholder="Enter zip code or city"
+            placeholder="Insira CEP ou cidade"
             value={filters.location}
             onChange={(e) => updateFilters('location', e.target.value)}
             className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -134,7 +134,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFiltersChange 
       {/* Availability */}
       <div>
         <label className="block text-sm font-medium text-gray-900 mb-3">
-          Availability
+          Disponibilidade
         </label>
         <div className="space-y-2">
           {availabilityOptions.map((option) => (
@@ -165,7 +165,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFiltersChange 
         })}
         className="w-full py-2 px-4 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
       >
-        Clear All Filters
+        Limpar Filtros
       </button>
     </div>
   );

@@ -14,7 +14,7 @@ const Dashboard = () => {
       id: '1',
       cleaner: {
         name: 'Sarah Johnson',
-        image: 'https://images.unsplash.com/photo-1494790108755-2616c0763a57?w=100&h=100&fit=crop&crop=face',
+        image: 'https://images.pexels.com/photos/3768910/pexels-photo-3768910.jpeg?w=400&h=300',
         rating: 4.9
       },
       date: '2024-01-15',
@@ -29,7 +29,7 @@ const Dashboard = () => {
       id: '2',
       cleaner: {
         name: 'Maria Rodriguez',
-        image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
+        image: 'https://cdn.pixabay.com/photo/2019/04/02/18/16/cleaning-4098410_960_720.jpg',
         rating: 4.8
       },
       date: '2024-01-18',
@@ -47,7 +47,7 @@ const Dashboard = () => {
       id: '3',
       cleaner: {
         name: 'Jennifer Chen',
-        image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face',
+        image: 'https://images.pexels.com/photos/5591967/pexels-photo-5591967.jpeg?w=400',
         rating: 4.9
       },
       date: '2024-01-10',
@@ -188,8 +188,8 @@ const Dashboard = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               <div className="flex items-center">
-                <div className="p-2 bg-green-100 rounded-lg">
-                  <Calendar className="w-6 h-6 text-[#243c28]" />
+                <div className="p-2 bg-blue-100 rounded-lg">
+                  <Calendar className="w-6 h-6 text-blue-600" />
                 </div>
                 <div className="ml-4">
                   <p className="text-sm font-medium text-gray-600">Próximos</p>

@@ -5,9 +5,10 @@ import { Search, MessageCircle, Calendar, User, Menu } from 'lucide-react';
 
 interface LayoutProps {
   children: React.ReactNode;
+  hideFooter?: boolean
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children, hideFooter }) => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
@@ -140,7 +141,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white">
+      {!hideFooter && <footer className="text-white bg-[#1b2e1f]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
@@ -150,13 +151,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </div>
                 <span className="text-xl font-bold">Limpify</span>
               </div>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-300 text-sm">
                 Conecte-se com faxineiras confiáveis para serviços de limpeza profissionais e confiáveis.
               </p>
             </div>
             <div>
               <h3 className="font-semibold mb-4">Serviços</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm text-gray-300">
                 <li>Limpeza Residencial</li>
                 <li>Limpeza Comercial</li>
                 <li>Limpeza Pesada</li>
@@ -165,7 +166,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </div>
             <div>
               <h3 className="font-semibold mb-4">Suporte</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm text-gray-300">
                 <li>Central de Ajuda</li>
                 <li>Segurança</li>
                 <li>Fale Conosco</li>
@@ -174,7 +175,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </div>
             <div>
               <h3 className="font-semibold mb-4">Empresa</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm text-gray-300">
                 <li>Sobre Nós</li>
                 <li>Carreiras</li>
                 <li>Imprensa</li>
@@ -182,11 +183,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2024 Limpify. Todos os direitos reservados.</p>
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-300">
+            <p>&copy; 2025 Limpify. Todos os direitos reservados.</p>
           </div>
         </div>
-      </footer>
+      </footer>}
     </div>
   );
 };

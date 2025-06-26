@@ -10,7 +10,7 @@ const Index = () => {
     {
       id: '1',
       name: 'Sarah Johnson',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616c0763a57?w=400&h=300&fit=crop&crop=face',
+      image: 'https://images.pexels.com/photos/3768910/pexels-photo-3768910.jpeg?w=400&h=300',
       rating: 4.9,
       reviewCount: 127,
       location: 'Centro',
@@ -23,7 +23,7 @@ const Index = () => {
     {
       id: '2',
       name: 'Maria Rodriguez',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=300&fit=crop&crop=face',
+      image: 'https://cdn.pixabay.com/photo/2019/04/02/18/16/cleaning-4098410_960_720.jpg',
       rating: 4.8,
       reviewCount: 89,
       location: 'Zona Sul',
@@ -36,7 +36,7 @@ const Index = () => {
     {
       id: '3',
       name: 'Jennifer Chen',
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop&crop=face',
+      image: 'https://images.pexels.com/photos/5591967/pexels-photo-5591967.jpeg?w=400',
       rating: 4.9,
       reviewCount: 156,
       location: 'Zona Norte',
@@ -74,14 +74,14 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-green-100 py-20">
+      <section className="bg-gradient-to-br from-[#243c28] to-green-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-50 mb-6">
               Encontre Faxineiras
-              <span className="text-[#243c28] block">Confiáveis</span>
+              <span className="text-green-200 block">Confiáveis</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-50 mb-8 max-w-3xl mx-auto">
               Conecte-se com faxineiras verificadas e confiáveis para serviços de limpeza residencial e comercial. Reserve instantaneamente ou agende para depois.
             </p>
             
@@ -106,7 +106,7 @@ const Index = () => {
             </div>
 
             {/* Quick Stats */}
-            <div className="flex justify-center space-x-8 text-sm text-gray-600">
+            <div className="flex justify-center space-x-8 text-sm text-gray-50">
               <div className="flex items-center space-x-1">
                 <CheckCircle className="w-4 h-4 text-green-500" />
                 <span>500+ Faxineiras Verificadas</span>
@@ -235,7 +235,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#243c28]">
+      <section className="py-20 bg-green-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Pronto para Começar?
