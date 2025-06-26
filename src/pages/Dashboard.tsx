@@ -237,7 +237,7 @@ const Dashboard = () => {
 
           {/* Bookings */}
           <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between flex-wrap gap-4">
               <TabsList>
                 <TabsTrigger value="upcoming">Próximos Agendamentos</TabsTrigger>
                 <TabsTrigger value="past">Agendamentos Passados</TabsTrigger>
