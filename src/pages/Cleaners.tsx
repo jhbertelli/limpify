@@ -144,7 +144,7 @@ const Cleaners = () => {
                     <MobileFilterDrawer filters={filters} onFiltersChange={setFilters} />
                   </div>
                   
-                  <div className="flex items-center space-x-2">
+                  <div className="items-center space-x-2 hidden lg:flex">
                     <button
                       onClick={() => setViewMode('grid')}
                       className={`p-2 rounded-lg ${viewMode === 'grid' ? 'bg-green-100 text-[#243c28]' : 'text-gray-400 hover:text-gray-600'}`}
