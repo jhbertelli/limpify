@@ -22,8 +22,8 @@ const Layout: React.FC<LayoutProps> = ({ children, hideFooter }) => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-[#243c28] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">L</span>
+              <div className="w-8 h-8 flex items-center justify-center">
+                <img src="/LimpifyLogoGreenSmall.png" alt="Logo" />
               </div>
               <span className="text-xl font-bold text-gray-900">Limpify</span>
             </Link>
@@ -146,8 +146,8 @@ const Layout: React.FC<LayoutProps> = ({ children, hideFooter }) => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-[#243c28] rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">L</span>
+                <div className="w-8 h-8 flex items-center justify-center">
+                  <img src="/LimpifyLogoWhiteSmall.png" alt="Logo" />
                 </div>
                 <span className="text-xl font-bold">Limpify</span>
               </div>
