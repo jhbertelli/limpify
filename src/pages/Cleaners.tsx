@@ -119,9 +119,9 @@ const Cleaners = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">Encontrar Faxineiras</h1>
+                <h1 className="text-2xl font-bold text-gray-900">Encontrar Diaristas</h1>
                 <p className="text-gray-600 mt-1">
-                  {filteredCleaners.length} faxineiras disponíveis na sua região
+                  {filteredCleaners.length} diaristas disponíveis na sua região
                 </p>
               </div>
               
@@ -179,9 +179,9 @@ const Cleaners = () => {
                   <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Search className="w-8 h-8 text-gray-400" />
                   </div>
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">Nenhuma faxineira encontrada</h3>
+                  <h3 className="text-lg font-medium text-gray-900 mb-2">Nenhuma diarista encontrada</h3>
                   <p className="text-gray-600 mb-4">
-                    Tente ajustar seus filtros ou critérios de busca para encontrar mais faxineiras.
+                    Tente ajustar seus filtros ou critérios de busca para encontrar mais diaristas.
                   </p>
                   <button
                     onClick={() => {
