@@ -44,7 +44,7 @@ const Layout: React.FC<LayoutProps> = ({ children, hideFooter }) => {
                   isActive('/cleaners') ? 'text-[#243c28]' : 'text-gray-700 hover:text-[#243c28]'
                 }`}
               >
-                Encontrar Faxineiras
+                Encontrar Diaristas
               </Link>
               <Link
                 to="/dashboard"
@@ -109,7 +109,7 @@ const Layout: React.FC<LayoutProps> = ({ children, hideFooter }) => {
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Encontrar Faxineiras
+                  Encontrar Diaristas
                 </Link>
                 <Link
                   to="/dashboard"
@@ -152,7 +152,7 @@ const Layout: React.FC<LayoutProps> = ({ children, hideFooter }) => {
                 <span className="text-xl font-bold">Limpify</span>
               </div>
               <p className="text-gray-300 text-sm">
-                Conecte-se com faxineiras confiáveis para serviços de limpeza profissionais e confiáveis.
+                Conecte-se com diaristas confiáveis para serviços de limpeza profissionais e confiáveis.
               </p>
             </div>
             <div>

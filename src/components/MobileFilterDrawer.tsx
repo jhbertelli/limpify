@@ -38,7 +38,7 @@ const MobileFilterDrawer: React.FC<MobileFilterDrawerProps> = ({ filters, onFilt
         <DrawerHeader>
           <DrawerTitle>Filtros de Busca</DrawerTitle>
           <DrawerDescription>
-            Ajuste os filtros para encontrar as faxineiras ideais
+            Ajuste os filtros para encontrar as diaristas ideais
           </DrawerDescription>
         </DrawerHeader>
         <div className="px-4 pb-4 max-h-[60vh] overflow-y-auto">

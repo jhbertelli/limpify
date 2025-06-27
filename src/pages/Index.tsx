@@ -51,13 +51,13 @@ const Index = () => {
   const features = [
     {
       icon: Shield,
-      title: 'Faxineiras Verificadas',
-      description: 'Todas as faxineiras passam por verificação de antecedentes e processo de validação'
+      title: 'Diaristas Verificadas',
+      description: 'Todas as diaristas passam por verificação de antecedentes e processo de validação'
     },
     {
       icon: Star,
       title: 'Altamente Avaliadas',
-      description: 'Escolha entre faxineiras com as melhores avaliações e excelentes comentários'
+      description: 'Escolha entre diaristas com as melhores avaliações e excelentes comentários'
     },
     {
       icon: Calendar,
@@ -67,7 +67,7 @@ const Index = () => {
     {
       icon: MessageCircle,
       title: 'Comunicação Direta',
-      description: 'Converse diretamente com as faxineiras antes e durante o serviço'
+      description: 'Converse diretamente com as diaristas antes e durante o serviço'
     }
   ];
 
@@ -78,11 +78,11 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-50 mb-6">
-              Encontre Faxineiras
+              Encontre Diaristas
               <span className="text-green-200 block">Confiáveis</span>
             </h1>
             <p className="text-xl text-gray-50 mb-8 max-w-3xl mx-auto">
-              Conecte-se com faxineiras verificadas e confiáveis para serviços de limpeza residencial e comercial. Reserve instantaneamente ou agende para depois.
+              Conecte-se com diaristas verificadas e confiáveis para serviços de limpeza residencial e comercial. Reserve instantaneamente ou agende para depois.
             </p>
             
             {/* Search Bar */}
@@ -100,7 +100,7 @@ const Index = () => {
                   to="/cleaners"
                   className="bg-[#243c28] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#1a2a1c] transition-colors"
                 >
-                  Encontrar Faxineiras
+                  Encontrar Diaristas
                 </Link>
               </div>
             </div>
@@ -109,7 +109,7 @@ const Index = () => {
             <div className="flex justify-center space-x-8 text-sm text-gray-50">
               <div className="flex items-center space-x-1">
                 <CheckCircle className="w-4 h-4 text-green-500" />
-                <span>500+ Faxineiras Verificadas</span>
+                <span>500+ Diaristas Verificadas</span>
               </div>
               <div className="flex items-center space-x-1">
                 <CheckCircle className="w-4 h-4 text-green-500" />
@@ -132,7 +132,7 @@ const Index = () => {
               Por que Escolher a Limpify?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Facilitamos encontrar faxineiras confiáveis e profissionais que atendem às suas necessidades e padrões específicos.
+              Facilitamos encontrar diaristas confiáveis e profissionais que atendem às suas necessidades e padrões específicos.
             </p>
           </div>
 
@@ -159,10 +159,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Faxineiras em Destaque
+              Diaristas em Destaque
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Conheça algumas das nossas faxineiras mais bem avaliadas e verificadas, prontas para ajudá-lo.
+              Conheça algumas das nossas diaristas mais bem avaliadas e verificadas, prontas para ajudá-lo.
             </p>
           </div>
 
@@ -177,7 +177,7 @@ const Index = () => {
               to="/cleaners"
               className="bg-[#243c28] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#1a2a1c] transition-colors inline-flex items-center space-x-2"
             >
-              <span>Ver Todas as Faxineiras</span>
+              <span>Ver Todas as Diaristas</span>
               <Search className="w-4 h-4" />
             </Link>
           </div>
@@ -205,7 +205,7 @@ const Index = () => {
                 Pesquise e Compare
               </h3>
               <p className="text-gray-600">
-                Navegue pelas faxineiras verificadas da sua região, compare preços e leia avaliações de outros clientes.
+                Navegue pelas diaristas verificadas da sua região, compare preços e leia avaliações de outros clientes.
               </p>
             </div>
             <div className="text-center">
@@ -216,7 +216,7 @@ const Index = () => {
                 Converse e Reserve
               </h3>
               <p className="text-gray-600">
-                Converse com as faxineiras diretamente para discutir suas necessidades, depois reserve instantaneamente ou agende para depois.
+                Converse com as diaristas diretamente para discutir suas necessidades, depois reserve instantaneamente ou agende para depois.
               </p>
             </div>
             <div className="text-center">
@@ -227,7 +227,7 @@ const Index = () => {
                 Relaxe e Aproveite
               </h3>
               <p className="text-gray-600">
-                Sua faxineira chega pontualmente e começa o trabalho. Você pode acompanhar o progresso e avaliar sua experiência.
+                Sua diarista chega pontualmente e começa o trabalho. Você pode acompanhar o progresso e avaliar sua experiência.
               </p>
             </div>
           </div>
@@ -247,7 +247,7 @@ const Index = () => {
             to="/cleaners"
             className="bg-white text-[#243c28] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center space-x-2 text-lg"
           >
-            <span>Encontre Sua Faxineira Hoje</span>
+            <span>Encontre Sua Diarista Hoje</span>
             <Search className="w-5 h-5" />
           </Link>
         </div>

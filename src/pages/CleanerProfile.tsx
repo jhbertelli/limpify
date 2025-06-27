@@ -38,7 +38,7 @@ const CleanerProfile = () => {
     isVerified: true,
     availability: 'Disponível hoje',
     experience: '5+ anos',
-    description: "Oi! Sou a Sarah, uma faxineira profissional com mais de 5 anos de experiência. Tenho orgulho de fornecer serviços de limpeza minuciosos e confiáveis que deixam sua casa impecável. Sou totalmente segurada, com antecedentes verificados e comprometida em usar produtos eco-friendly sempre que possível.",
+    description: "Oi! Sou a Sarah, uma diarista profissional com mais de 5 anos de experiência. Tenho orgulho de fornecer serviços de limpeza minuciosos e confiáveis que deixam sua casa impecável. Sou totalmente segurada, com antecedentes verificados e comprometida em usar produtos eco-friendly sempre que possível.",
     services: [
       { name: 'Limpeza Regular', price: 35, duration: '2-3 horas' },
       { name: 'Limpeza Pesada', price: 45, duration: '4-5 horas' },
@@ -92,7 +92,7 @@ const CleanerProfile = () => {
                 className="flex items-center space-x-2 text-gray-600 hover:text-[#243c28] transition-colors"
               >
                 <ArrowLeft className="w-4 h-4" />
-                <span>Voltar para faxineiras</span>
+                <span>Voltar para diaristas</span>
               </Link>
               <div className="flex items-center space-x-2">
                 <button className="p-2 text-gray-600 hover:text-red-500 transition-colors">
@@ -350,7 +350,7 @@ const CleanerProfile = () => {
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
                   <h3 className="font-semibold text-gray-900 mb-4">Precisa de Ajuda?</h3>
                   <div className="space-y-3 text-sm text-gray-600">
-                    <p>Tem dúvidas sobre esta faxineira ou precisa de ajuda com o agendamento?</p>
+                    <p>Tem dúvidas sobre esta diarista ou precisa de ajuda com o agendamento?</p>
                     <Button variant="outline" size="sm" className="w-full">
                       <Phone className="w-4 h-4 mr-2" />
                       Contatar Suporte
